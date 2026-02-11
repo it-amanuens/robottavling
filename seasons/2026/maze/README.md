@@ -145,4 +145,4 @@ void loop() {
 }
 ```
 # What now?
-At this point you should have all the necessary tools to know where the line is using the line sensors, know where the robot is using the motor encoders, know where the finish is using the ToF sensor, and last but not least be able to move the robot using the motors themselves. These are all very simple examples that you'll of course need to build on top of and combine to make anything useful. Now it's up to you to program the robot to solve a the maze described in the competition-specific document. Good luck!
+At this point you should have all the necessary tools to know where the line is using the line sensors, know where the robot is using the motor encoders, know where the finish is using the ToF sensor, and last but not least be able to move the robot using the motors themselves. These are all very simple examples that you'll of course need to build on top of and combine to make anything useful. Now it's up to you to program the robot to solve a the maze described in the competition-specific document. If you feel lost and don't know where to start, check the [strategy directory](strategy/). Good luck!
