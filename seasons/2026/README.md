@@ -45,7 +45,7 @@ void loop() {
   delay(10); // 10 ms
 }
 ```
-You should now see that the serial monitor displays zeros and ones, and that the LED on the sensor turns on or off when it's aimed at black or white. To handle five sensors efficiently, I recommend storing the pins in an array and using for-loops and indexing to access each one. The pins which the sensors are connected to on the provided robot should be 3, 4, 5, 6, and 7, in order from left to right if the sensors considered to be the front of the robot.
+You should now see that the serial monitor displays zeros and ones, and that the LED on the sensor turns on or off when it's aimed at black or white. To handle five sensors efficiently, I recommend storing the pins in an array and using for-loops and indexing to access each one. The pins which the sensors are connected to on the provided robot should be 3, 4, 5, 6, and 7, in order from left to right if the sensors are considered to be the front of the robot.
 ## Hello, Motor!
 The specification for the motors can be found on [The Motor Product Wiki](https://wiki.dfrobot.com/Micro_DC_Motor_with_Encoder-SJ01_SKU__FIT0450). Running the motors is fairly straight forward since the motor drivers are built into the microcontroller. All you need to do is connect the positive and negative of the motors to the motor outputs on the board and run the following code. The pins 0, 1, 2, and 10 are wired on the microcontroller so no connection is necessary.
 ```c
