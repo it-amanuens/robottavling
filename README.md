@@ -1,0 +1,1 @@
+Welcome to the Umeå University robot competition GitHub repository! Here you will find programming-related instructions for the competitions, sorted by year under the seasons directory. Note that these may be changed with further information or tips during the course of the competition so it's recommended to check again every now and then.
