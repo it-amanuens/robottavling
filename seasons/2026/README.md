@@ -27,7 +27,7 @@ void loop() {
 ```
 Uploading this code, using the right-arrow in the top left of the IDE, you should see it successfully upload the code but then, to your dismay, nothing. The fix is simple, we need to open the serial monitor provided by the Arduino IDE by going to the top bar and clicking `Tools > Serial Monitor` or alternatively `Ctrl + Shift + M`. If the upload was successful and the board is connected, you should now see a new line with the text `Hello, World!` approximately once per second. If this does not work, try to find a solution online but in case you get stuck and can't find what's wrong, you may also contact us in the Robot Group at Umeå University through the Robot Competition Discord server.
 ## Hello, Sensor!
-The next component to check is the line sensors whose specification can be found on [The Line Sensor Product Wiki](https://wiki.dfrobot.com/Line_Tracking_Sensor_for_Arduino_V4_SKU_SEN0017). Note that this is the wiki for V4 while you've been provided with V6. They are extremely similar but it might be worth to mention in case you find discrepancies. To test a sensor, we just upload the following code with the sensor connected to pin 3. Also note that analog pins can be used as digital pins but not always the other way around, and the sensor is rated for both 3.3V and 5V so it doesn't matter which pins you choose.
+The next component to check is the line sensors whose specification can be found on [The Line Sensor Product Wiki](https://wiki.dfrobot.com/Line_Tracking_Sensor_for_Arduino_V4_SKU_SEN0017). Note that this is the wiki for V4 while you've been provided with V6. They are extremely similar but it might be worth to mention in case you find discrepancies. To test a sensor, we just upload the following code with the sensor connected to pin 3, which should be the leftmost sensor in the original configuration as provided by us. Also note that analog pins can be used as digital pins but not always the other way around, and the sensor is rated for both 3.3V and 5V so it doesn't matter which pins you choose.
 ```c
 // The sensor is connected to pin 3.
 int sensorPin = 3;
@@ -45,7 +45,7 @@ void loop() {
   delay(10); // 10 ms
 }
 ```
-You should now see that the serial monitor displays zeros and ones, and that the LED on the sensor turns on or off when it's aimed at black or white. To handle five sensors efficiently, I recommend storing the pins in an array and using for-loops and indexing to access each one.
+You should now see that the serial monitor displays zeros and ones, and that the LED on the sensor turns on or off when it's aimed at black or white. To handle five sensors efficiently, I recommend storing the pins in an array and using for-loops and indexing to access each one. The pins which the sensors are connected to on the provided robot should be 3, 4, 5, 6, and 7, in order from left to right if the sensors considered to be the front of the robot.
 ## Hello, Motor!
 The specification for the motors can be found on [The Motor Product Wiki](https://wiki.dfrobot.com/Micro_DC_Motor_with_Encoder-SJ01_SKU__FIT0450). Running the motors is fairly straight forward since the motor drivers are built into the microcontroller. All you need to do is connect the positive and negative of the motors to the motor outputs on the board and run the following code. The pins 0, 1, 2, and 10 are wired on the microcontroller so no connection is necessary.
 ```c
