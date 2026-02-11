@@ -81,6 +81,8 @@ The motors are equipped with a so-called encoder, which allows us to track exact
 ```c
 #include <atomic>
 
+// Note that on your robot, the left and right motors may be swapped.
+// If so, just change leftA to 21 and rightA to 20.
 int leftA = 20;
 int rightA = 21;
 std::atomic<int> leftAtomicPulses{0};
